@@ -3,6 +3,16 @@
 @section('contenido')
 
     <div class="container-fluid">
+        @if($message=Session::get('validarCedula'))
+            <script>
+                Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "{{$message}}",
+                footer: '<a href=""></a>'
+                });
+            </script>
+        @endif
         @if($message=Session::get('mensaje'))
             <script>
                 Swal.fire({
@@ -52,7 +62,7 @@
                                     <form action="{{url('parrocos',$Parroco->id)}}" method="post">
                                         @csrf
                                         {{method_field('DELETE')}}
-                                        <button type="submit" class="btn btn-danger">
+                                        <button type="submit" onclick="return confirm('¿Esta seguro de eliminar este registro?')" class="btn btn-danger">
                                             <i class="bi bi-trash"></i>
                                         </button>
 

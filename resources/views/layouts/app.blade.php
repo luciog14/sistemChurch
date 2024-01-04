@@ -16,7 +16,23 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <link rel="icon" href="{{ asset('images/ico/favicon.ico') }}" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
+  <!-- iconos de boostrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+  <!-- Jquery -->
+  <script src="{{asset('plugins/jquery/jquery.js')}}"></script>
+  <!-- alertas -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div id="app">

@@ -23,7 +23,7 @@
             <div class="col-md-12">
                 <div class="card shadow mt-3 card card-outline card-info">
                     <div class="card-header">
-                        <h3 class="card-title "><b>Registrar datos del esposo</b></h3>
+                        <h3 class="card-title "><b>Registrar datos del padre</b></h3>
                     </div>
                     <div class="card-body">
 

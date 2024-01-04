@@ -52,7 +52,7 @@
                                     <form action="{{url('defunciones',$defuncion->id)}}" method="post">
                                         @csrf
                                         {{method_field('DELETE')}}
-                                        <button type="submit" class="btn btn-danger">
+                                        <button type="submit" onclick="return confirm('¿Está seguro de eliminar este registro?')" class="btn btn-danger">
                                             <i class="bi bi-trash"></i>
                                         </button>
 
@@ -63,11 +63,11 @@
                             @endforeach
                         </tbody>
                      </table>
-                             
+
                         <script>
                             $(function () {
                                 $("#example1").DataTable({
-                                    
+
                                     "pageLength": 10,
                                     "language": {
                                         "emptyTable": "No hay información",
@@ -131,6 +131,6 @@
 
 
 
-       
+
     </div>
 @endsection

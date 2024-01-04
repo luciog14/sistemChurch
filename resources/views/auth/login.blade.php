@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <div class="card shadow mt-3 card card-outline card-success">
+        <div class="card shadow mt-3 card card-outline card-primary">
                 <div class="card-header">Iniciar Sesión</div>
 
                 <div class="card-body">
@@ -55,13 +55,13 @@
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     Iniciar Sesión
-                                </button>
+                                 </button>
 
-                                @if (Route::has('password.request'))
+                                <!-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         Recordar Contraseña
                                     </a>
-                                @endif
+                                @endif -->
                             </div>
                         </div>
                     </form>

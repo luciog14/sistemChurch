@@ -14,11 +14,7 @@
                 <div class="card shadow mt-3 card card-outline card-primary">
                     <div class="card-header">
                         <h3 class="card-title text-dark">Llene todos los datos</h3>
-                        <div class="card-tools">
-                            <a href="{{url('defunciones')}}" class="btn btn-primary">
-                            <ion-icon name="arrow-redo-outline"></ion-icon>
-                            </a>
-                        </div>
+
                     </div>
                     <div class="card-body">
 
@@ -80,7 +76,7 @@
                             <div class="row">
                                 <div class="col-md-12 text-right">
                                     <div class="form-group">
-                                        <a href="" class="btn btn-secondary">Cancelar</a>
+                                        <a href="{{url('defunciones')}}" class="btn btn-secondary">Cancelar</a>
                                         <button type="submit" class="btn btn-primary">Guardar Defunción</button>
                                     </div>
                                 </div>

@@ -90,9 +90,18 @@ class ParrocoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id){
-        Parroco::destroy($id);
-        return redirect()->route('parrocos.index')->with('mensaje','Eliminado correctamente');
+    public function destroy($id)
+    {
+        $parroco = Parroco::with(['bautizos', 'confirmaciones', 'matrimonios'])->find($id);
 
+        // Verificar si hay bautizos o confirmaciones relacionados con esta madre
+        if ($parroco->bautizos->isEmpty() && $parroco->confirmaciones->isEmpty() && $parroco->matrimonios->isEmpty()) {
+            // No hay bautizos o confirmaciones relacionados, se puede eliminar
+            $parroco->delete();
+            return redirect()->route('parrocos.index')->with('mensaje', 'Eliminado correctamente');
+        } else {
+            // Hay bautizos o confirmaciones relacionados, mostrar mensaje
+            return redirect()->route('parrocos.index')->with('validarCedula', 'No se puede eliminar porque está asociado a otro registro');
+        }
     }
 }
